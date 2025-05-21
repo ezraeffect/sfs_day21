@@ -9,6 +9,53 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+/*
+ * TabControl
+ * 웹 브라우저 처럼 탭 버튼을 눌러 다른 내용의 화면 전환
+ * 
+ * 1. TabControl
+ * - 전체 탭 컨테이너
+ * - 내부의 여러개 TabItem을 가질 ㄹ수 있음
+ * 
+ * 2. TabItem
+ * - 각각의 탭을 나타내는 항목
+ * - Header : 탭 제목
+ * - Content : 보여줄 컨텐츠 배치
+ */
+
+/*
+ * StackPanel
+ * 자식 요소들을 수직(Vertical) 또는 수평(Horizontal) 방향으로 자동으로 정렬해서 배치하는 Layout Panel
+ * - 요소들을 순서대로 쌓음
+ * - 마우스 조작으로 요소 이동 불가능
+ * 
+ * [Attribute]
+ * Orientation : 쌓는 방향 지정 - Vertical(수직) : Default, Horizontal(수형)
+ */
+
+/*
+ * Grid
+ * 행과 열을 나눠 UI 요소를 격자 구조로 배치하도록 하는 Layout Panel
+ * - 요소들이 표 형태로 정리되어야 할 때
+ * - 요소들이 정확한 위치에 있어야 할 때
+ * - 반응형 비율 기반 배치가 필요 할 때
+ * 
+ * [Attribute]
+ * RowDefinition : 행(가로줄)
+ * ColumnDefinition : 열(세로줄)
+ * Height / Width : 
+ * - Auto : 내부 요소의 크기에 맞게
+ * - * : 나머지 공간을 비율로 자동 분배
+ * - 숫자(px) : 고정 크기
+ */
+
+/*
+ * TextBlock
+ * 텍스트를 화면에 출력해주는 WPF에서 가장 기본적인 텍스트 표시용 Control
+ * - 화면 읽기 전용 텍스트를 표시할 때 사용
+ * - 사용자 직접 입력 X (입력은 TextBox)
+ */
+
 namespace day_21
 {
     /// <summary>

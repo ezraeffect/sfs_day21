@@ -7,6 +7,45 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <TabControl>
+            <!-- 첫 번째 탭 아이템 -->
+            <TabItem Header="학생 정보">
+                <StackPanel Margin="10">
+                    <TextBlock Text="학생: 홍길동"/>
+                    <TextBlock Text="나이: 28"/>
+                </StackPanel>
+            </TabItem>
+            
+            <!-- 두 번째 탭 아이템-->
+            <TabItem Header="Grid">
+                <Grid>
+                    <!-- 행과 열 정보 미리 선언 -->
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <!-- Content -->
+                    <!-- Grid.Row : 해당 요소가 위치할 행 번호 (0부터 시작) -->
+                    <!-- Grid.Column : 해당 요소가 위치할 열 번호 (0부터 시작) -->
+                    
+                    <!-- 0행 0열 -->
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="이름" Margin="5"/>
 
+                    <!-- 0행 1열 -->
+                    <TextBox Grid.Row="0" Grid.Column="1" Margin="5"/>
+                    
+                    <!-- 1행 0열부터 1열까지 합침 -->
+                    <!-- Grid.RawSpan : 여러 행에 걸쳐 배치할 떄 (행 삽입) -->
+                    <!-- Grid.ColumnSpan : 여러 열에 걸쳐 배치할 때 (열 삽입) -->
+                    <Button Grid.Row="1" Grid.ColumnSpan="2" Content="확인" Margin="5"/>
+
+                </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
