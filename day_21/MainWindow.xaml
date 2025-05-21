@@ -18,9 +18,9 @@
         </Grid.ColumnDefinitions>
 
         <TextBlock Grid.Row="0" Grid.Column="0" Text="ID:" TextAlignment="Center" VerticalAlignment="Center" FontSize="30"/>
-        <TextBox x:Name="textBox_ID" Grid.Row="0" Grid.Column="1" FontSize="30"/>
+        <TextBox x:Name="textBox_ID" Grid.Row="0" Grid.Column="1" Margin="10" FontSize="30"/>
         <TextBlock Grid.Row="1" Grid.Column="0" Text="PW:" TextAlignment="Center" VerticalAlignment="Center" FontSize="30"/>
-        <TextBox x:Name="textBox_PW" Grid.Row="1" Grid.Column="1" FontSize="30"/>
+        <TextBox x:Name="textBox_PW" Grid.Row="1" Grid.Column="1" Margin="10" FontSize="30"/>
         <Button Grid.Row="2" Grid.ColumnSpan="2" Content="Login" Margin="10" FontSize="30" Click="Button_Click"/>
 
     </Grid>
