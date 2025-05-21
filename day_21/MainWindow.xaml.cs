@@ -35,12 +35,17 @@ namespace day_21
         {
             InitializeComponent();
 
-            
+
+        }
+
+        private void UpdateBackground()
+        {
+            bgGrid.Background = new SolidColorBrush(color.ToColor());
         }
 
         public class RGB
         {
-            public int Red {  get; set; }
+            public int Red { get; set; }
             public int Green { get; set; }
             public int Blue { get; set; }
 
@@ -80,24 +85,47 @@ namespace day_21
                 this.Green = 255 - g;
                 this.Blue = 255 - b;
             }
+
+            public Color ToColor()
+            {
+                return Color.FromRgb((byte)this.Red, (byte)this.Green, (byte)this.Blue);
+            }
+
+            public void PrintColor()
+            {
+                Console.WriteLine("Color Info");
+                Console.WriteLine($"R : {Red}");
+                Console.WriteLine($"G : {Green}");
+                Console.WriteLine($"B : {Blue}");
+            }
         }
 
-        private void sliderRed_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        private void slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            color.Red = (int)sliderRed.Value;
-            textBlockRed.Text = color.Red.ToString();
-        }
+            Slider slider = (Slider)sender;
 
-        private void sliderGreen_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-            color.Green = (int)sliderGreen.Value;
-            textBlockGreen.Text = color.Green.ToString();
-        }
+            if (slider.Tag is string tag)
+            {
+                int value = (int)slider.Value;
 
-        private void sliderBlue_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-            color.Blue = (int)sliderBlue.Value;
-            textBlockGreen.Text= color.Blue.ToString();
+                if (tag == "Red")
+                {
+                    color.Red = value;
+                    textBlockRed.Text = color.Red.ToString();
+                }
+                else if (tag == "Green")
+                {
+                    color.Green = value;
+                    textBlockGreen.Text = color.Green.ToString();
+                }
+                else if (tag == "Blue")
+                {
+                    color.Blue = value;
+                    textBlockBlue.Text = color.Blue.ToString();
+                }
+            }
+
+            UpdateBackground();
         }
     }
 }
