@@ -7,6 +7,54 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <GroupBox Header="RGB Slider" Margin="10" FontSize="18">
+            <!-- RGB Slider Grid -->
+            <Grid Margin="20">
+                <!-- Grid Definitions -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                
+                <!-- Red -->
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="R" FontSize="20" TextAlignment="Center" VerticalAlignment="Center" Margin="20" />
+                <Slider Grid.Row="0" Grid.Column="1" x:Name="sliderRed" Minimum="0" Maximum="255" VerticalAlignment="Center" Margin="20" TickFrequency="5" ValueChanged="sliderRed_ValueChanged"/>
+                <TextBlock Grid.Row="0" Grid.Column="2" x:Name="textBlockRed" Text="0" FontSize="20" TextAlignment="Center" VerticalAlignment="Center" Margin="20"/>
 
+                 <!-- Green -->
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="G" FontSize="20" TextAlignment="Center" VerticalAlignment="Center" Margin="20"/>
+                <Slider Grid.Row="1" Grid.Column="1" x:Name="sliderGreen" Minimum="0" Maximum="255" VerticalAlignment="Center" Margin="20" TickFrequency="5" ValueChanged="sliderGreen_ValueChanged"/>
+                <TextBlock Grid.Row="1" Grid.Column="2" x:Name="textBlockGreen" Text="0" FontSize="20" TextAlignment="Center" VerticalAlignment="Center" Margin="20"/>
+                
+                <!-- Blue -->
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="B" FontSize="20" TextAlignment="Center" VerticalAlignment="Center" Margin="20"/>
+                <Slider Grid.Row="2" Grid.Column="1" x:Name="sliderBlue" Minimum="0" Maximum="255" VerticalAlignment="Center" Margin="20" TickFrequency="5" ValueChanged="sliderBlue_ValueChanged"/>
+                <TextBlock Grid.Row="2" Grid.Column="2" x:Name="textBlockBlue" Text="0" FontSize="20" TextAlignment="Center" VerticalAlignment="Center" Margin="20"/>
+
+                <!-- Color Type GroupBox -->
+                <GroupBox Header="Color Type" Grid.Row="3" Grid.ColumnSpan="3" FontSize="18">
+                    <Grid>
+                        <!-- Grid Definitions -->
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Color Type RadioButton -->
+                        <RadioButton x:Name="radioColorType_original" Content="Original" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <RadioButton x:Name="radioColorType_grayTone" Content="Gray Tone" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <RadioButton x:Name="radioColorType_invert" Content="Invert" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Grid>
+                </GroupBox>
+            </Grid>
+        </GroupBox>
     </Grid>
 </Window>
