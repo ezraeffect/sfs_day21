@@ -14,11 +14,24 @@ namespace day_21
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window    
     {
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox_ID.Text) || string.IsNullOrWhiteSpace(textBox_PW.Text))
+            {
+                MessageBox.Show("아이디와 비밀번호를 모두 입력해주세요.", "경고", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            else
+            {
+                MessageBox.Show($"로그인 시도 : {textBox_ID.Text} / {textBox_PW.Text}","로그인 정보",MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+                
         }
     }
 }

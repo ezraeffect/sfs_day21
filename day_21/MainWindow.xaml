@@ -6,7 +6,22 @@
         xmlns:local="clr-namespace:day_21"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Margin="100">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="ID:" TextAlignment="Center" VerticalAlignment="Center" FontSize="30"/>
+        <TextBox x:Name="textBox_ID" Grid.Row="0" Grid.Column="1" FontSize="30"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="PW:" TextAlignment="Center" VerticalAlignment="Center" FontSize="30"/>
+        <TextBox x:Name="textBox_PW" Grid.Row="1" Grid.Column="1" FontSize="30"/>
+        <Button Grid.Row="2" Grid.ColumnSpan="2" Content="Login" Margin="10" FontSize="30" Click="Button_Click"/>
 
     </Grid>
 </Window>
