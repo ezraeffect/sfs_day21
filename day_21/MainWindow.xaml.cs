@@ -127,7 +127,7 @@ namespace day_21
         private void volumeSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             // Slider Event
-            if (volumeText.Text != null)
+            if (volumeText != null)
             {
                 volumeText.Text = $"현재 값 : {volumeSlider.Value}";
             }
