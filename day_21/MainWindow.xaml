@@ -46,6 +46,37 @@
 
                 </Grid>
             </TabItem>
+
+            <TabItem Header="GroupBox">
+                <GroupBox Header="사용자 정보" Margin="10">
+                    <StackPanel Margin="10">
+                        <TextBlock Text="이름: "/>
+                        <TextBox Width="200"/>
+                        
+                        <TextBlock Text="나이: "/>
+                        <TextBox Width="200"/>
+
+                        <TextBlock Text="성별을 선택하세요: " FontSize="14" Margin="0,0,0,10"/>
+                        <RadioButton x:Name="radioMale" Content="남성" GroupName="gender" IsChecked="True" Margin="0,0,0,15"/>
+                        <RadioButton x:Name="radioFemale" Content="여성" GroupName="gender" Margin="0,0,0,15"/>
+                        
+                        <!--  Checked = "radioMale_Checked" 처럼 이벤트 = 메서드명 으로 이벤트 헨들러와 직접 연결도 가능하다 -->
+
+                        <Button Content="확인" Click="Button_Click"/>
+                    </StackPanel>
+                </GroupBox>
+            </TabItem>
+            <TabItem Header="Slider">
+                <StackPanel Margin="20">
+                    <TextBlock Text="볼륨 조절: " FontSize="14" Margin="0,0,0,10"/>
+                    <Slider Minimum="0" Maximum="100" Value="50"/>
+                    <Slider Minimum="0" Maximum="100" TickFrequency="20" IsSnapToTickEnabled="True"/>
+                    <StackPanel Margin="20">
+                        <Slider x:Name="volumeSlider" Minimum="0" Maximum="100" Value="40" TickFrequency="10" IsSnapToTickEnabled="True" TickPlacement="BottomRight" Width="200" ValueChanged="volumeSlider_ValueChanged"/>
+                        <TextBlock x:Name="volumeText" FontSize="20" Margin="10" Text="현재 값"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
         </TabControl>
     </Grid>
 </Window>
