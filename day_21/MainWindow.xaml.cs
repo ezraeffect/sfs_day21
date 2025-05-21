@@ -86,6 +86,15 @@ using System.Windows.Shapes;
  * - IsSnapToTickEnabled : 눈금에 맞춰 조절할지 여부
  * - Ticks : 눈금 위치 설정
  */
+
+/*
+ * CheckBox
+ * 여러개의 항목을 복수 선택 가능하게 할 때 사용
+ * 
+ * [Attribute]
+ * - IsChecked : 체크 여부를 Boolean Type으로 반환
+ * - 
+ */
 namespace day_21
 {
     /// <summary>
@@ -121,6 +130,46 @@ namespace day_21
             if (volumeText.Text != null)
             {
                 volumeText.Text = $"현재 값 : {volumeSlider.Value}";
+            }
+        }
+
+        private void checkbox_Checked(object sender, RoutedEventArgs e)
+        {
+            // 체크된 한목들을 문자열로 조합
+            List<string> selectedFruits = new List<string>();
+            if (checkboxApple.IsChecked == true)
+            {
+                selectedFruits.Add("사과");
+            }            
+
+            if (checkboxBanana.IsChecked == true)
+            {
+                selectedFruits.Add("바나나");
+            }            
+
+            if (checkboxOrange.IsChecked == true)
+            {
+                selectedFruits.Add("오렌지");
+            }
+
+            textResult.Text = $"{string.Join(",", selectedFruits)}";
+        }
+
+        private void checkboxState_Click(object sender, RoutedEventArgs e)
+        {
+            bool? state = checkboxState.IsChecked;
+
+            if (state == true)
+            {
+                textState.Text = "Current State : True";
+            }
+            else if (state == false)
+            {
+                textState.Text = "Current State : False";
+            }
+            else
+            {
+                textState.Text = "Current State : Null";
             }
         }
 
