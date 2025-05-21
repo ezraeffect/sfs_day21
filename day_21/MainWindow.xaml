@@ -24,19 +24,19 @@
                 </Grid.ColumnDefinitions>
                 
                 <!-- Red -->
-                <TextBlock Grid.Row="0" Grid.Column="0" Text="R" FontSize="20" TextAlignment="Center" VerticalAlignment="Center" Margin="20" Background="White"/>
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="R" FontSize="20" TextAlignment="Center" VerticalAlignment="Center" Margin="20"/>
                 <Slider Grid.Row="0" Grid.Column="1" x:Name="sliderRed" Minimum="0" Maximum="255" VerticalAlignment="Center" Margin="20" TickFrequency="5" ValueChanged="slider_ValueChanged" Tag="Red" Value="0" IsSnapToTickEnabled="True"/>
-                <TextBlock Grid.Row="0" Grid.Column="2" x:Name="textBlockRed" Text="0" FontSize="20" TextAlignment="Center" VerticalAlignment="Center" Margin="20" Background="White"/>
+                <TextBlock Grid.Row="0" Grid.Column="2" x:Name="textBlockRed" Text="0" FontSize="20" TextAlignment="Center" VerticalAlignment="Center" Margin="20"/>
 
                  <!-- Green -->
-                <TextBlock Grid.Row="1" Grid.Column="0" Text="G" FontSize="20" TextAlignment="Center" VerticalAlignment="Center" Margin="20" Background="White"/>
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="G" FontSize="20" TextAlignment="Center" VerticalAlignment="Center" Margin="20"/>
                 <Slider Grid.Row="1" Grid.Column="1" x:Name="sliderGreen" Minimum="0" Maximum="255" VerticalAlignment="Center" Margin="20" TickFrequency="5" ValueChanged="slider_ValueChanged" Tag="Green" Value="0" IsSnapToTickEnabled="True"/>
-                <TextBlock Grid.Row="1" Grid.Column="2" x:Name="textBlockGreen" Text="0" FontSize="20" TextAlignment="Center" VerticalAlignment="Center" Margin="20" Background="White"/>
+                <TextBlock Grid.Row="1" Grid.Column="2" x:Name="textBlockGreen" Text="0" FontSize="20" TextAlignment="Center" VerticalAlignment="Center" Margin="20"/>
                 
                 <!-- Blue -->
-                <TextBlock Grid.Row="2" Grid.Column="0" Text="B" FontSize="20" TextAlignment="Center" VerticalAlignment="Center" Margin="20" Background="White"/>
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="B" FontSize="20" TextAlignment="Center" VerticalAlignment="Center" Margin="20"/>
                 <Slider Grid.Row="2" Grid.Column="1" x:Name="sliderBlue" Minimum="0" Maximum="255" VerticalAlignment="Center" Margin="20" TickFrequency="5" ValueChanged="slider_ValueChanged" Tag="Blue" Value="0" IsSnapToTickEnabled="True"/>
-                <TextBlock Grid.Row="2" Grid.Column="2" x:Name="textBlockBlue" Text="0" FontSize="20" TextAlignment="Center" VerticalAlignment="Center" Margin="20" Background="White"/>
+                <TextBlock Grid.Row="2" Grid.Column="2" x:Name="textBlockBlue" Text="0" FontSize="20" TextAlignment="Center" VerticalAlignment="Center" Margin="20"/>
 
                 <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.ColumnSpan="3">
                     <!-- Result Rectangle GroupBox  -->
